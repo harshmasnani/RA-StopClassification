@@ -5,7 +5,7 @@ import datetime as dt
 import tkinter as tk
 from tkinter import filedialog
 
-path = r'C:\Users\pulke\Downloads\RA'  
+path = r'Your Path'  
 allFiles = glob.glob(os.path.join(path,"*.csv"))
 
 dfList = []
