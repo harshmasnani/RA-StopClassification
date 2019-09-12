@@ -4,8 +4,9 @@ import pandas as pd
 import datetime as dt
 import tkinter as tk
 from tkinter import filedialog
+import re
 
-path = r'Your Path'  
+path = r'/Users/Sunny/RA/StopClassification/Data'  
 allFiles = glob.glob(os.path.join(path,"*.csv"))
 
 dfList = [] #copy all files as cleaned dataframes in a list
@@ -15,7 +16,7 @@ for fileElement in allFiles:
 
     df = pd.read_csv(fileElement)
 
-    col_names = ['StopID', 'StartRow', 'StartTime', 'StopRow', 'EndTime', 'Latitude', 'Longitude','Distance from previous stop', 'Average Speed from Previous stop']
+    col_names = ['VehicleID', 'StopID', 'StartRow', 'StartTime', 'StopRow', 'EndTime', 'Latitude', 'Longitude','Distance from previous stop', 'Average Speed from Previous stop']
     frame = pd.DataFrame(columns = col_names)
 
     count = 0 #stop number
@@ -76,6 +77,15 @@ for fileElement in allFiles:
                 if firstStop == 0:
                     speed += df.at[i,'Speed (km/h)']
                     nForSpeed += 1
+        
+        #assigning VehicleID           
+        name=fileElement
+        name=re.split("/",name) #USE \ FOR WINDOWS / FOR LINUX
+        name=name[-1]
+        name=re.split("-",name)
+        name=name[0]
+        frame.at[count, 'VehicleID']=name
+
         elementPrevious = df.at[i,'Speed (km/h)']
 
     frame.at[0,'Distance from previous stop'] = 0
