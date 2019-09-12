@@ -8,8 +8,8 @@ from tkinter import filedialog
 path = r'Your Path'  
 allFiles = glob.glob(os.path.join(path,"*.csv"))
 
-dfList = []
-keyList = []
+dfList = [] #copy all files as cleaned dataframes in a list
+keyList = [] #list of file ids
 
 for fileElement in allFiles:
 
@@ -18,15 +18,15 @@ for fileElement in allFiles:
     col_names = ['StopID', 'StartRow', 'StartTime', 'StopRow', 'EndTime', 'Latitude', 'Longitude','Distance from previous stop', 'Average Speed from Previous stop']
     frame = pd.DataFrame(columns = col_names)
 
-    count = 0
-    elementPrevious = -1
-    distance1 = -1
-    firstStop = -1
-    lat = 0.0
-    lon = 0.0
-    n = 0
-    speed = 0
-    nForSpeed = 0
+    count = 0 #stop number
+    elementPrevious = -1 #flag; -1 representing previous speed entity is not zero. changes to 0.
+    distance1 = -1 #flag; -1 representing first entity; changes to distance travelled before a stop.
+    firstStop = -1 #flag; -1 representing first encountered stop. changes to 0.
+    lat = 0.0 #temp variables to calculate average of co-ordinates for a stop.
+    lon = 0.0 #temp variables to calculate average of co-ordinates for a stop.
+    n = 0 #records encountered for a stop.
+    speed = 0 #temp for average speed before stop
+    nForSpeed = 0 #records encountred before stop for which speed was not zero.
 
     df['Date and Time'] = df['Date and Time'].astype('datetime64[s]')
 
