@@ -94,6 +94,10 @@ for fileElement in allFiles:
     frame['stopDuration'] = (frame['EndTime'] - frame['StartTime']).dt.seconds
     frame['TimeDIffbtwStops'] = (((frame['StartTime']-frame['EndTime'].shift()).fillna(dt.timedelta(hours=00)))).dt.seconds
     
+    #swapping longitude latitude
+    frame=frame.rename({"Latitude":"x","Longitude":"y"}, axis='columns') 
+    frame=frame.rename({"x":"Longitude","y":"Latitude"}, axis='columns') 
+
     dfList.append(frame)
     keyList.append('File:' + str(len(keyList) + 1))
 
