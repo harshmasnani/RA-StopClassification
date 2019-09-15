@@ -1,421 +1,51 @@
-{
-	"auto_complete":
-	{
-		"selected_items":
-		[
-			[
-				"long",
-				"long1-long2"
-			],
-			[
-				"file",
-				"fileElement"
-			],
-			[
-				"File",
-				"fileElement"
-			],
-			[
-				"Dist",
-				"DistEWR"
-			],
-			[
-				"Dis",
-				"DistALB"
-			],
-			[
-				"D",
-				"DistNYC"
-			],
-			[
-				"Sh",
-				"Sheet2"
-			],
-			[
-				"dec",
-				"decrypted"
-			],
-			[
-				"card",
-				"Card"
-			],
-			[
-				"crea",
-				"createDeck"
-			],
-			[
-				"l",
-				"listOfClients"
-			],
-			[
-				"add",
-				"addToList"
-			],
-			[
-				"shuff",
-				"shuffle"
-			],
-			[
-				"shuffl",
-				"shuffleAndEncrypt"
-			],
-			[
-				"cl",
-				"client1"
-			],
-			[
-				"shuf",
-				"shuffleAndEncrypt"
-			],
-			[
-				"de",
-				"default"
-			],
-			[
-				"pr",
-				"print"
-			],
-			[
-				"SafteyT",
-				"SafteyTrainBus"
-			],
-			[
-				"Carpool",
-				"SafteyCarpool"
-			],
-			[
-				"mlogit",
-				"-mlogit.data"
-			],
-			[
-				"CostS",
-				"CostSCS"
-			],
-			[
-				"CostC",
-				"CostCS"
-			],
-			[
-				"Time",
-				"TimeTaxiCS"
-			],
-			[
-				"SA",
-				"SafteyCS"
-			]
-		]
-	},
-	"buffers":
-	[
-	],
-	"build_system": "",
-	"build_system_choices":
-	[
-		[
-			[
-				[
-					"Packages/Java/Ant.sublime-build",
-					""
-				],
-				[
-					"Packages/Java/JavaC.sublime-build",
-					""
-				]
-			],
-			[
-				"Packages/Java/JavaC.sublime-build",
-				""
-			]
-		],
-		[
-			[
-				[
-					"Packages/Java/Ant.sublime-build",
-					""
-				],
-				[
-					"Packages/Java/JavaC.sublime-build",
-					""
-				],
-				[
-					"Packages/User/RunJava.sublime-build",
-					""
-				]
-			],
-			[
-				"Packages/User/RunJava.sublime-build",
-				""
-			]
-		]
-	],
-	"build_varint": "",
-	"command_palette":
-	{
-		"height": 0.0,
-		"last_filter": "",
-		"selected_items":
-		[
-			[
-				"package",
-				"Package Control: Advanced Install Package"
-			],
-			[
-				"package c",
-				"Package Control: Install Package"
-			],
-			[
-				"package ",
-				"Package Control: Install Package"
-			],
-			[
-				"build",
-				"Javatar: Builds..."
-			],
-			[
-				"project",
-				"Project: Add Folder"
-			],
-			[
-				"projec",
-				"Project: Add Folder"
-			],
-			[
-				"folder",
-				"Project: Add Folder"
-			],
-			[
-				"Project",
-				"Project: Save As"
-			],
-			[
-				"Install Package",
-				"Package Control: Install Package"
-			]
-		],
-		"width": 0.0
-	},
-	"console":
-	{
-		"height": 0.0,
-		"history":
-		[
-		]
-	},
-	"distraction_free":
-	{
-		"menu_visible": true,
-		"show_minimap": false,
-		"show_open_files": false,
-		"show_tabs": false,
-		"side_bar_visible": false,
-		"status_bar_visible": false
-	},
-	"file_history":
-	[
-		"/Users/Sunny/RA/StopClassification/Pulkeet-Code/gaTask03.py",
-		"/Users/Sunny/RA/StopClassification/Pulkeet-Code/gaTask1.py",
-		"/Users/Sunny/cs542_MachineLearning/FinalProject/code/MerckActivity/ntree20_benchmark.R",
-		"/Users/Sunny/cs542_MachineLearning/FinalProject/code/MerckActivity/Rsquared.R",
-		"/Users/Sunny/Desktop/RegressionAnalysis/multinomLogLinear.r",
-		"/Users/Sunny/Desktop/RegressionAnalysis/conditionalLogit.R",
-		"/Users/Sunny/Desktop/RegressionAnalysis/multinomialLogit.R",
-		"/Users/Sunny/sample.java",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/APPENC01.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/9.15.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/9.13.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/6.9.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/1.27.txt",
-		"/Users/Sunny/Desktop/RegressionAnalysis/clean.R",
-		"/Users/Sunny/Desktop/APPENC01wCol.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/APPENC02Cleaned.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/APPENC02.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/5.4.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/5.4",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/4.12.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/1.20.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/3.24",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/3.18.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/1.21.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/1.28.txt",
-		"/Users/Sunny/Desktop/APPENC02Cleaned.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/2.42",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/Toluca.txt",
-		"/Users/Sunny/Library/Mobile Documents/com~apple~CloudDocs/STA510/datasets/27.txt",
-		"/Users/Sunny/cs542_MachineLearning/FinalProject/code/Notebooks/transformationsCost/bintrans.txt",
-		"/Users/Sunny/cs542_MachineLearning/FinalProject/code/Notebooks/transformationsCost/logtrans.txt",
-		"/Users/Sunny/cs542_MachineLearning/FinalProject/code/Notebooks/transformationsCost/notrans.txt",
-		"/Users/Sunny/Desktop/RegressionAnalysis/lmultinomialLogit.R",
-		"/Users/Sunny/Desktop/dummyDataSets/clean.R",
-		"/Users/Sunny/Desktop/dummyDataSets/[garbage]allPredictors.R",
-		"/Users/Sunny/Desktop/dummyDataSets/finalFormulaMlogit.R",
-		"/Users/Sunny/Desktop/dummyDataSets/nlogit.R",
-		"/Users/Sunny/Desktop/pokerDC/pokerDC.java",
-		"/Users/Sunny/Desktop/pokerDC/scratchbook.java",
-		"/Users/Sunny/Library/Application Support/Sublime Text 3/Packages/User/JavaImports.sublime-settings",
-		"/Users/Sunny/Library/Application Support/Sublime Text 3/Packages/JavaImports/JavaImports.sublime-settings",
-		"/Users/Sunny/Desktop/pokerDC.java",
-		"/Users/Sunny/Library/Application Support/Sublime Text 3/Packages/User/RunJava.sublime-build",
-		"/Users/Sunny/Documents/challenges/toy_codingChallenges/letsTryAgain/ColoringStrokes/untitled",
-		"/Users/Sunny/Documents/challenges/toy_codingChallenges/letsTryAgain/ColoringStokes.java",
-		"/Users/Sunny/Documents/challenges/ColoringStrokes.java",
-		"/Users/Sunny/Documents/challenges/toy-codingChallenges/letsTryAgain/ColoringStokes.java",
-		"/Users/Sunny/Documents/challenges/toy-codingChallenges/letsTryAgain/main.java",
-		"/Users/Sunny/Documents/challenges/toy-codingChallenges/letsTryAgain/ColoringStokes/java.java",
-		"/Users/Sunny/Documents/challenges/src/sample.java",
-		"/Users/Sunny/Desktop/sample.java",
-		"/Users/Sunny/Documents/challenges/cs.java",
-		"/Users/Sunny/Documents/untitled.sublime-project",
-		"/Users/Sunny/Desktop/dummyDataSets/format.R",
-		"/Users/Sunny/Desktop/dummyDataSets/multinom.r",
-		"/Users/Sunny/Desktop/dummyDataSets/dosentWork.r",
-		"/Users/Sunny/Desktop/dummyDataSets/codeForMlogit.r",
-		"/Users/Sunny/Desktop/works.R",
-		"/Users/Sunny/Desktop/dummyDataSets/(allVariables)codeForMlogit.R",
-		"/Users/Sunny/Desktop/dummyDataSets/Costpart2.R",
-		"/Users/Sunny/cs542_MachineLearning/Homework/hwk7/spambase.data",
-		"/Users/Sunny/cs542_MachineLearning/Homework/hwk7/spambase.names",
-		"/Users/Sunny/cs542_MachineLearning/Homework/hwk7/spambase.DOCUMENTATION",
-		"/Users/Sunny/RA/Rcodes/mlogit.r",
-		"/Users/Sunny/Desktop/SAT.java",
-		"/Users/Sunny/Downloads/aim-50-2_0-yes1-1.cnf",
-		"/Users/Sunny/Downloads/CBS_k3_n100_m411_b30/CBS_k3_n100_m411_b30_14.cnf",
-		"/Users/Sunny/Downloads/CBS_k3_n100_m411_b30/CBS_k3_n100_m411_b30_2.cnf",
-		"/Users/Sunny/Downloads/aim-50-2_0-no-2.cnf",
-		"/Users/Sunny/RA/Rcodes/cleanAndJoinCSVs",
-		"/Users/Sunny/Desktop/RcodeExpr",
-		"/Users/Sunny/Desktop/x1.csv",
-		"/Users/Sunny/Desktop/x1.txt",
-		"/Users/Sunny/Desktop/x.txt",
-		"/Users/Sunny/Desktop/217 ext Vicktoria",
-		"/Users/Sunny/cs542_MachineLearning/CodeSnips/class_2/first.py",
-		"/Users/Sunny/cs542_MachineLearning/KNIME/diabetes/myDiabetes.txt"
-	],
-	"find":
-	{
-		"height": 30.0
-	},
-	"find_in_files":
-	{
-		"height": 0.0,
-		"where_history":
-		[
-		]
-	},
-	"find_state":
-	{
-		"case_sensitive": true,
-		"find_history":
-		[
-		],
-		"highlight": true,
-		"in_selection": false,
-		"preserve_case": false,
-		"regex": false,
-		"replace_history":
-		[
-		],
-		"reverse": false,
-		"show_context": true,
-		"use_buffer2": true,
-		"whole_word": false,
-		"wrap": true
-	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		}
-	],
-	"incremental_find":
-	{
-		"height": 30.0
-	},
-	"input":
-	{
-		"height": 42.0
-	},
-	"layout":
-	{
-		"cells":
-		[
-			[
-				0,
-				0,
-				1,
-				1
-			]
-		],
-		"cols":
-		[
-			0.0,
-			1.0
-		],
-		"rows":
-		[
-			0.0,
-			1.0
-		]
-	},
-	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 144.0
-	},
-	"output.find_results":
-	{
-		"height": 0.0
-	},
-	"pinned_build_system": "",
-	"project": "rectify-DistanceTravelled.sublime-project",
-	"replace":
-	{
-		"height": 56.0
-	},
-	"save_all_on_build": true,
-	"select_file":
-	{
-		"height": 0.0,
-		"last_filter": "",
-		"selected_items":
-		[
-			[
-				"",
-				"untitled"
-			]
-		],
-		"width": 0.0
-	},
-	"select_project":
-	{
-		"height": 0.0,
-		"last_filter": "",
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"last_filter": "",
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"selected_group": 0,
-	"settings":
-	{
-	},
-	"show_minimap": true,
-	"show_open_files": false,
-	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 269.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
-}
+####File purpose
+####for "Distance traveled (km)"" feature to show distance values calculated by DistanceCalc()
+
+import os
+import glob
+import pandas as pd
+import math
+
+
+# #swapping longitude and latitude here. Don't forget to delete pull request for StopExtraction.py if this file is executed!
+# frame=frame.rename({"Latitude":"x","Longitude":"y"}, axis='columns') 
+# frame=frame.rename({"x":"Longitude","y":"Latitude"}, axis='columns')
+
+#return distance betweeen two co-ordinates(decimal digits) in meters
+def distance(lat1, long1, lat2, long2):
+	lat1=math.radians(lat1)
+	long1=math.radians(long1)
+	lat2=math.radians(lat2)
+	long2=math.radians(long2)
+
+	x=math.atan(math.sqrt((math.cos(lat2)*math.sin(long1-long2))**2+((math.cos(lat1)*math.sin(lat2))-
+		(math.sin(lat1)*math.cos(lat2)*math.cos(long1-long2)))**2)/((math.sin(lat1)*math.sin(lat2))+
+		(math.cos(lat1)*math.cos(lat2)*math.cos(long1-long2))))
+	return x*6371009
+
+path = r'/Users/Sunny/RA/StopClassification/Data/testDistanceTravelled'  
+allFiles = glob.glob(os.path.join(path,"*.csv"))
+
+for fileElement in allFiles:
+	df = pd.read_csv(fileElement)
+	
+	####raw file has two columns for "Distance traveled (km)"; deleting one
+	dist=df.ix[:, 'Distance traveled (km)']
+	df=df.drop(columns=['Distance traveled (km)'])
+	df['Distance traveled (km)']=dist
+
+	####
+	####
+	####swapping longitude and latitude here. Don't forget to delete pull request for StopExtraction.py if this file is executed!
+	df=df.rename({"Latitude":"x","Longitude":"y"}, axis='columns') 
+	df=df.rename({"x":"Longitude","y":"Latitude"}, axis='columns')
+	
+	
+	for i in df.index:
+		if i==0:
+			continue
+		df.at[i, 'Distance traveled (km)']=distance(df.at[i,'Latitude'],df.at[i,'Longitude'],df.at[i-1,'Latitude'],df.at[i-1,'Longitude'])
+	
+	####idk why the compiler adds this weird column. Dropping it anyway!	
+	df=df.drop(columns=['Distance traveled (km).1'])
+	df.to_csv(fileElement)
