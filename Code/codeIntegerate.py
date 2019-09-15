@@ -5,10 +5,10 @@ import statistics
 #file resolution i.e interval between timestamps for a file=time
 time=
 accuracy=90
-if elementPrevious != 0 && 
-						abs(frame.at[count,'Average Speed from Previous stop']*time-frame.at[count, 'Distance from previous stop'])
-						<
-						((100-accuracy)/100)*frame.at[count, 'Distance from previous stop']
+if elementPrevious != 0 and 
+			abs(frame.at[count,'Average Speed from Previous stop']*time-frame.at[count, 'Distance from previous stop'])
+			<
+			((100-accuracy)/100)*frame.at[count, 'Distance from previous stop']
 
 #speed variance before stop
 
