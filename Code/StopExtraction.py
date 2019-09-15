@@ -5,6 +5,7 @@ import datetime as dt
 import tkinter as tk
 from tkinter import filedialog
 import re
+import math
 
 path = r'/Users/Sunny/RA/StopClassification/Data'  
 allFiles = glob.glob(os.path.join(path,"*.csv"))
@@ -17,16 +18,18 @@ for fileElement in allFiles:
     df = pd.read_csv(fileElement)
 
     col_names = ['VehicleID', 'StopID', 'StartRow', 'StartTime', 'StopRow', 'EndTime', 'Latitude', 'Longitude','Distance from previous stop', 'Average Speed from Previous stop']
+    
+    #creating a new frame and appending to it
     frame = pd.DataFrame(columns = col_names)
 
     count = 0 #stop number
     elementPrevious = -1 #flag; -1 representing previous speed entity is not zero. changes to 0.
     distance1 = -1 #flag; -1 representing first entity; changes to distance travelled before a stop.
     firstStop = -1 #flag; -1 representing first encountered stop. changes to 0.
-    lat = 0.0 #temp variables to calculate average of co-ordinates for a stop.
-    lon = 0.0 #temp variables to calculate average of co-ordinates for a stop.
+    lat = 0.0 #temp variable to calculate average of co-ordinates for a stop.
+    lon = 0.0 #temp variable to calculate average of co-ordinates for a stop.
     n = 0 #records encountered for a stop.
-    speed = 0 #temp for average speed before stop
+    speed = 0 #temp variable for average speed before stop
     nForSpeed = 0 #records encountred before stop for which speed was not zero.
 
     df['Date and Time'] = df['Date and Time'].astype('datetime64[s]')
@@ -83,7 +86,8 @@ for fileElement in allFiles:
         name=re.split("/",name) #USE \ FOR WINDOWS / FOR LINUX
         name=name[-1]
         name=re.split("-",name)
-        name=name[0]
+        name=name[1] #[0] for files provided by Pulkeet in email. 1 for files uploaded by Pulkeet on github.
+                     #Consistency needed    
         frame.at[count, 'VehicleID']=name
 
         elementPrevious = df.at[i,'Speed (km/h)']
@@ -94,6 +98,11 @@ for fileElement in allFiles:
     frame['stopDuration'] = (frame['EndTime'] - frame['StartTime']).dt.seconds
     frame['TimeDIffbtwStops'] = (((frame['StartTime']-frame['EndTime'].shift()).fillna(dt.timedelta(hours=00)))).dt.seconds
     
+    ##Commenting swap here because raw files have correct latitude longitude now
+    # #swapping longitude latitude
+    # frame=frame.rename({"Latitude":"x","Longitude":"y"}, axis='columns') 
+    # frame=frame.rename({"x":"Longitude","y":"Latitude"}, axis='columns') 
+
     dfList.append(frame)
     keyList.append('File:' + str(len(keyList) + 1))
 
