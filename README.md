@@ -4,4 +4,4 @@ This project attempts to extract stops from raw GPS data about delivery trucks a
 'Maintenance(non-delivery)' through a seroius data cleaning phase. After labeling, an appropriate machine learning algorithm 
 will be used to train a model that predicts the kind of stop.
 
-This is research project under Dr.Xia at SUNY Polytechnic, Utica.
+This is a research project under Dr.Xia at SUNY Polytechnic, Utica.
