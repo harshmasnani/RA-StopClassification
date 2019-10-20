@@ -1,3 +1,5 @@
+#The STUFF
+
 import pandas as pd
 import re
 import statistics
@@ -94,8 +96,8 @@ def breakStops():
                         framex.at[0, 'StopRow'] = j - 1
                         framex.at[0, 'StartTime'] = df.at[a1, 'Date and Time']
                         framex.at[0, 'EndTime'] = df.at[j - 1, 'Date and Time']
-                        #framex.at[0, 'Latitude'] = averageLat(a1,j-1)
-                        #framex.at[0, 'Longitude'] = averageLong(a1,j-1)
+                        framex.at[0, 'Latitude'] = averageLat(a1,j-1)
+                        framex.at[0, 'Longitude'] = averageLong(a1,j-1)
 
                         if(x==0): #firstsubsection will have these details of the stop before that
                             framex.at[0, 'Average Speed before stop'] = frame.at[i, 'Average Speed before stop']
@@ -130,8 +132,8 @@ def breakStops():
                             framex.at[0,'StopRow']= frame.at[i,'StopRow']
                             framex.at[0,'StartTime']= df.at[j,'Date and Time']
                             framex.at[0,'EndTime']=df.at[int(frame.at[i,'StopRow']),'Date and Time']
-                            #framex.at[0,'Latitude'] = averageLat(a1,j-1)
-                            #framex.at[0,'Longitude'] = averageLong(a1,j-1)
+                            framex.at[0,'Latitude'] = averageLat(j,int(frame.at[i,'StopRow']))
+                            framex.at[0,'Longitude'] = averageLong(j,int(frame.at[i,'StopRow']))
                             framex.at[0,'Average Speed before stop'] = 0
                             framex.at[0,'Distance from previous stop(in kms)'] = 0
                             framex.at[0,'Time travelled before stop'] = 0
@@ -154,8 +156,8 @@ def breakStops():
                         framex.at[0, 'StopRow'] = j
                         framex.at[0, 'StartTime'] = df.at[a1, 'Date and Time']
                         framex.at[0, 'EndTime'] = df.at[j, 'Date and Time']
-                        # frame1.at[int(i) + x, 'Latitude'] = averageLat(a1,j)
-                        # frame1.at[int(i) + x, 'Longitude'] = averageLong(a1,j)
+                        framex.at[0, 'Latitude'] = averageLat(a1,j)
+                        framex.at[0, 'Longitude'] = averageLong(a1,j)
                         framex.at[0, 'Average Speed before stop'] = 0
                         framex.at[0, 'Distance from previous stop(in kms)'] = 0
                         framex.at[0, 'Time travelled before stop'] = 0
@@ -175,8 +177,8 @@ def breakStops():
             framex.at[0, 'StopRow'] = frame.at[i,'StopRow']
             framex.at[0, 'StartTime'] = frame.at[i,'StartTime']
             framex.at[0, 'EndTime'] = frame.at[i,'EndTime']
-            # frame1.at[int(i) + x, 'Latitude'] = averageLat(a1,j)
-            # frame1.at[int(i) + x, 'Longitude'] = averageLong(a1,j)
+            framex.at[0, 'Latitude'] = averageLat(int(frame.at[i,'StartRow']), int(frame.at[i,'StopRow']))
+            framex.at[0, 'Longitude'] = averageLong(int(frame.at[i,'StartRow']), int(frame.at[i,'StopRow']))
             framex.at[0, 'Average Speed before stop'] = frame.at[i,'Average Speed before stop']
             framex.at[0, 'Distance from previous stop(in kms)'] = frame.at[i,'Distance from previous stop(in kms)']
             framex.at[0, 'Time travelled before stop'] = frame.at[i,'Time travelled before stop']
@@ -212,8 +214,8 @@ def breakStopsAgain():
                         framex.at[0, 'StopRow'] = j - 1
                         framex.at[0, 'StartTime'] = df.at[a1, 'Date and Time']
                         framex.at[0, 'EndTime'] = df.at[j - 1, 'Date and Time']
-                        #framex.at[0, 'Latitude'] = averageLat(a1,j-1)
-                        #framex.at[0, 'Longitude'] = averageLong(a1,j-1)
+                        framex.at[0, 'Latitude'] = averageLat(a1,j-1)
+                        framex.at[0, 'Longitude'] = averageLong(a1,j-1)
 
                         if(x==0): #firstsubsection will have these details of the stop before that
                             framex.at[0, 'Average Speed before stop'] = frame.at[i, 'Average Speed before stop']
@@ -248,8 +250,8 @@ def breakStopsAgain():
                             framex.at[0,'StopRow']= frame.at[i,'StopRow']
                             framex.at[0,'StartTime']= df.at[j,'Date and Time']
                             framex.at[0,'EndTime']=df.at[int(frame.at[i,'StopRow']),'Date and Time']
-                            #framex.at[0,'Latitude'] = averageLat(a1,j-1)
-                            #framex.at[0,'Longitude'] = averageLong(a1,j-1)
+                            framex.at[0,'Latitude'] = averageLat(j,int(frame.at[i,'StopRow']))
+                            framex.at[0,'Longitude'] = averageLong(j,int(frame.at[i,'StopRow']))
                             framex.at[0,'Average Speed before stop'] = 0
                             framex.at[0,'Distance from previous stop(in kms)'] = 0
                             framex.at[0,'Time travelled before stop'] = 0
@@ -272,8 +274,8 @@ def breakStopsAgain():
                         framex.at[0, 'StopRow'] = j
                         framex.at[0, 'StartTime'] = df.at[a1, 'Date and Time']
                         framex.at[0, 'EndTime'] = df.at[j, 'Date and Time']
-                        # frame1.at[int(i) + x, 'Latitude'] = averageLat(a1,j)
-                        # frame1.at[int(i) + x, 'Longitude'] = averageLong(a1,j)
+                        framex.at[0, 'Latitude'] = averageLat(a1,j)
+                        framex.at[0, 'Longitude'] = averageLong(a1,j)
                         framex.at[0, 'Average Speed before stop'] = 0
                         framex.at[0, 'Distance from previous stop(in kms)'] = 0
                         framex.at[0, 'Time travelled before stop'] = 0
@@ -293,8 +295,8 @@ def breakStopsAgain():
             framex.at[0, 'StopRow'] = frame.at[i,'StopRow']
             framex.at[0, 'StartTime'] = frame.at[i,'StartTime']
             framex.at[0, 'EndTime'] = frame.at[i,'EndTime']
-            # frame1.at[int(i) + x, 'Latitude'] = averageLat(a1,j)
-            # frame1.at[int(i) + x, 'Longitude'] = averageLong(a1,j)
+            framex.at[0, 'Latitude'] = averageLat(int(frame.at[i,'StartRow']),int(frame.at[i,'StopRow']))
+            framex.at[0, 'Longitude'] = averageLong(int(frame.at[i,'StartRow']),int(frame.at[i,'StopRow']))
             framex.at[0, 'Average Speed before stop'] = frame.at[i,'Average Speed before stop']
             framex.at[0, 'Distance from previous stop(in kms)'] = frame.at[i,'Distance from previous stop(in kms)']
             framex.at[0, 'Time travelled before stop'] = frame.at[i,'Time travelled before stop']
@@ -304,7 +306,7 @@ def breakStopsAgain():
             frame3=frame3.append(framex, ignore_index=True)
 
 
-#helper method to verify stop by distance formula. returns 0 if stop verified successfully
+#helper method to verify stop by distance formula. returns 0 if stop verified successfully. a=index where potential stop was encountered.
 def verifyStop(a):
     tolerance = 100  # in percentage.
     dist = 0
@@ -329,8 +331,29 @@ def verifyStop(a):
     else:
         return -999
 
-#helper method to verify stop by distance formula. returns 10 if stop verified successfully
+#helper method to verify stop by distance formula. returns 10 if stop verified successfully. a=index of following 0s. i=index of potential stop skipped by verifyStop()
+def verifyInnerStop(a,i):
+    tolerance = 100  # in percentage.
+    dist = 0
+    speed = 0
+    recordsEncSpeed = 0
+    timeTravelled= (df.at[a, 'Date and Time'] - df.at[last0index(i) + 1, 'Date and Time']).total_seconds()
 
+    for k in range(a, last0index(i) + 1, -1):
+        dist += df.at[k, 'Distance_geopy']
+
+    for j in range(a - 1, last0index(i), -1):
+        speed += df.at[j, 'Speed (km/h)']
+        recordsEncSpeed += 1
+    for l in range(a-1,i,-1):
+        speed+=math.sqrt(statistics.variance(df.loc[last0index(i)+1:i-1,'Speed (km/h)']))
+    avgSpeed = ((speed / recordsEncSpeed)) * (1000 / 3600)  # in meters per second
+    avgS = speed / recordsEncSpeed
+    # catches values that are dist+%tolerance and dist-%tolerance
+    if abs((avgSpeed * timeTravelled) - dist) <= ((tolerance / 100) * dist):
+        return 10
+    else:
+        return -888
 
 # method returning average speed
 def avgS(a):
@@ -381,29 +404,30 @@ for i in df.index:
     if i == 0:
         continue
     if df.at[i, 'Speed (km/h)'] == 0 and df.at[i - 1, 'Speed (km/h)'] != 0:
-        # delegatig to verifyStop(i) here
+        # delegating to verifyStop(i) here
         code = verifyStop(i)
         if code==-999:
             jumped.append(i)
-            # for x in range(i+1, last0index(i)+1):
-            #     innerCode=verifyInnerStop(x)
-            #     if innerCode==10:
-            #         stopNumber = stopNumber + 1
-            #         frame.at[stopNumber, 'StopID'] = int(stopNumber)
-            #         frame.at[stopNumber, 'VehicleID'] = name
-            #         frame.at[stopNumber, 'StartRow'] = x
-            #         frame.at[stopNumber, 'StopRow'] = next0index(x)
-            #         frame.at[stopNumber, 'StartTime'] = df.at[x, 'Date and Time']
-            #         frame.at[stopNumber, 'EndTime'] = df.at[next0index(x), 'Date and Time']
-            #         frame.at[stopNumber, 'Duration'] = frame.at[stopNumber, 'EndTime'] - df.at[x - 1, 'Date and Time']
-            #         frame.at[stopNumber, 'Latitude'] = averageLat(x, next0index(x))
-            #         frame.at[stopNumber, 'Longitude'] = averageLong(x, next0index(x))
-            #         frame.at[stopNumber, 'Average Speed before stop'] = avgS(i)#upto i-the jumped stop
-            #         if ((last0index(i) + 1) - (i - 1)) == 0:#upto i-the jumped stop
-            #             frame.at[stopNumber, 'Speed Variance'] = df.at[i - 1, 'Speed (km/h)']
-            #         else:
-            #             frame.at[stopNumber, 'Speed Variance'] = statistics.variance(
-            #                 df.loc[last0index(i) + 1:i - 1, 'Speed (km/h)'])
+            for x in range(i+1, next0index(i)+1):
+                innerCode=verifyInnerStop(x,i)
+                if innerCode==10:
+                    stopNumber = stopNumber + 1
+                    frame.at[stopNumber, 'StopID'] = int(stopNumber)
+                    frame.at[stopNumber, 'VehicleID'] = name
+                    frame.at[stopNumber, 'StartRow'] = x
+                    frame.at[stopNumber, 'StopRow'] = next0index(x)
+                    frame.at[stopNumber, 'StartTime'] = df.at[x, 'Date and Time']
+                    frame.at[stopNumber, 'EndTime'] = df.at[next0index(x), 'Date and Time']
+                    frame.at[stopNumber, 'Duration'] = frame.at[stopNumber, 'EndTime'] - df.at[x - 1, 'Date and Time']
+                    frame.at[stopNumber, 'Latitude'] = averageLat(x, next0index(x))
+                    frame.at[stopNumber, 'Longitude'] = averageLong(x, next0index(x))
+                    frame.at[stopNumber, 'Average Speed before stop'] = avgS(i)#upto i-the jumped stop
+                    if ((last0index(i) + 1) - (i - 1)) == 0:#upto i-the jumped stop
+                        frame.at[stopNumber, 'Speed Variance'] = df.at[i - 1, 'Speed (km/h)']
+                    else:
+                        frame.at[stopNumber, 'Speed Variance'] = statistics.variance(
+                            df.loc[last0index(i) + 1:i - 1, 'Speed (km/h)'])
+                break
 
         if code == 0:
             #start writing to frame if stop detected(code=0 returned by verifyStop)
@@ -460,8 +484,5 @@ while not((frame3.Duration<1440).all()):
 
 frame3.StopID=frame3.index
 
-
-
-#////\\\\\ DONT FORGET TO CONVERT DURATION AND TIME TRAVELLED BEFORE STOP TO MINUTES HERE INSTEAD OF DOING IT ABOVE.
 
 frame3.to_csv("/Users/Sunny/RA/StopClassification/Data/cleaned/Stops-C1415.csv", index=False)
