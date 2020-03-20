@@ -1,7 +1,7 @@
 ##VERIFYING timestamps in consolidated file are in order
 import pandas as pd
 
-df=pd.read_csv('/Users/Sunny/RA/StopClassification/Data/raw/raw-concatenated/C1415.csv')
+df=pd.read_csv('/Users/Sunny/RA-StopClassification/Datasets/raw/concatenated/D1317.csv')
 df.Index=df.index
 
 for i in range(1,len(df.index)):

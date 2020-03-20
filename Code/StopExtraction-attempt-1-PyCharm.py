@@ -7,13 +7,13 @@ import datetime
 import math
 
 ##writing correct indexes in the consolidated file
-fileElementxx = '/Users/Sunny/RA/StopClassification/Data/raw/raw-concatenated/C1415.csv'
-dfxx = pd.read_csv(fileElementxx)
-dfxx.Index=dfxx.index
-dfxx.to_csv('/Users/Sunny/RA/StopClassification/Data/raw/raw-concatenated/C1415.csv', index=False)
+fileElementxx = '/Users/Sunny/RA-StopClassification/Datasets/raw/concatenated/D1317.csv'
+# dfxx = pd.read_csv(fileElementxx)
+# dfxx.Index=dfxx.index
+# dfxx.to_csv('/Users/Sunny/RA-StopClassification/Datasets/raw/concatenated/B1710.csv', index=False)
 
 
-fileElement = '/Users/Sunny/RA/StopClassification/Data/raw/raw-concatenated/C1415.csv'
+fileElement = '/Users/Sunny/RA-StopClassification/Datasets/raw/concatenated/D1317.csv'
 df = pd.read_csv(fileElement)
 
 ##some 0 values in Dist_geopy are missing. Filling NAs with 0
@@ -23,7 +23,7 @@ df.Distance_geopy=df.Distance_geopy.fillna(0)
 df['Date and Time'] = df['Date and Time'].astype('datetime64[s]')
 
 #indexes in the consolidated file might be discrepant. dropping
-del df['Index']
+# del df['Index']
 
 # calculates the index before i where speed was 0
 def last0index(i):
@@ -73,7 +73,6 @@ def breakStops():
     global frame3
     global innerJack
     for i in frame.index:
-        #print(i)
         if (frame.at[int(i),'Duration'] > 1440):
             n=math.ceil(frame.at[int(i),'Duration']/1440) #n=no of subsections of the stop.
 
@@ -82,7 +81,10 @@ def breakStops():
                 if innerJack == 99:
                     innerJack = 0
                     break
-                timeThresh=datetime.datetime.strptime(str(df.at[int(frame.at[int(i),'StartRow'])-1,'Date and Time']),'%Y-%m-%d  %H:%M:%S') + ((x+1)*datetime.timedelta(seconds=86400))
+                if frame.at[int(i), 'StartRow'] == 0:
+                    timeThresh=datetime.datetime.strptime(str(df.at[int(frame.at[int(i),'StartRow']),'Date and Time']),'%Y-%m-%d  %H:%M:%S') + ((x+1)*datetime.timedelta(seconds=86400))
+                else:
+                    timeThresh=datetime.datetime.strptime(str(df.at[int(frame.at[int(i),'StartRow'])-1,'Date and Time']),'%Y-%m-%d  %H:%M:%S') + ((x+1)*datetime.timedelta(seconds=86400))
                 if(x==0):
                     a1=int(frame.at[int(i),'StartRow']) #start index
                     a2=int(frame.at[int(i),'StopRow'])
@@ -405,6 +407,7 @@ for i in df.index:
         continue
     if df.at[i, 'Speed (km/h)'] == 0 and df.at[i - 1, 'Speed (km/h)'] != 0:
         # delegating to verifyStop(i) here
+        print(i)
         code = verifyStop(i)
         if code==-999:
             jumped.append(i)
@@ -478,6 +481,9 @@ for i in frame.index:
 breakStops()
 
 while not((frame3.Duration<1440).all()):
+
+    # print('Breaking Stops')
+
     frame=frame3
     frame3=pd.DataFrame()
     breakStopsAgain()
@@ -485,4 +491,4 @@ while not((frame3.Duration<1440).all()):
 frame3.StopID=frame3.index
 
 
-frame3.to_csv("/Users/Sunny/RA/StopClassification/Data/cleaned/Stops-C1415.csv", index=False)
+frame3.to_csv("/Users/Sunny/RA-StopClassification/Datasets/clean/Stops-D1317.csv", index=False)

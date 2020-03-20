@@ -11,9 +11,9 @@ import datetime
 #key for sorted()
 def csort(r):
     asPDdataframe=pd.read_csv(r)
-    return datetime.datetime.strptime(asPDdataframe.at[0,'Date and Time'],'%Y-%m-%d  %H:%M:%S')
+    return datetime.datetime.strptime(asPDdataframe.at[0, 'Date and Time'],'%Y-%m-%d  %H:%M:%S')
 
-path='/Users/Sunny/RA/StopClassification/Data/raw/湘A-C1415'
+path='/Users/Sunny/RA-StopClassification/Datasets/raw/vehicle_specific_folders/œÊA-D1317'
 listFiles = [f for f in listdir(path) if isfile(join(path, f))]
 
 #retain just the csvs. Folder might have some hidden files that are not visible in a gui application(finder, file explorer etc. .)
@@ -31,25 +31,31 @@ listF=sorted(listFiles,key=csort)
 
 ##################################1 done################################
 
-#assumes the above works and files are in order.
+#Delete entries in top rows of files that cause Timestamp un-ordering
+for i in range (0,len(listF)-1):
+    f1 = pd.read_csv(listF[i])
+    f2 = pd.read_csv(listF[i + 1])
+
+    print(listF[i])
+
+    a=f1.at[len(f1.index) - 1, 'Date and Time']
+
+    l = []
+    for j in range(0,len(f2.index)):
+        if a >= f2.at[j, 'Date and Time']:
+            l.append(j)
+    f2.drop(l, inplace = False).to_csv(listF[i+1], index=False)
+
+
+#assumes the above works and files are in order. Concatenating.
 mainFrame=pd.DataFrame()
 
-for i in range(0,len(listF)-2):
-    if(i%2==0 or i==len(listF)-2):
-        f1=pd.read_csv(listF[i])
-        f2=pd.read_csv(listF[i+1])
-
-        a=f1.at[len(f1.index)-1,'Date and Time']
-        for j in range(0,len(f2.index)):
-          if a >= f2.at[j,'Date and Time']:
-              f2.drop(f2.index[j], inplace=True)#delete f2 row
-              break
-
-        mainFrame= mainFrame.append(f1,ignore_index=True)
-        mainFrame= mainFrame.append(f2, ignore_index=True)
+for i in listF:
+    f=pd.read_csv(i)
+    mainFrame = mainFrame.append(f, ignore_index=True)
 
 mainFrame.Index=mainFrame.index
 mainFrame.at[0,'Distance_geopy']=0
-mainFrame.to_csv("/Users/Sunny/RA/StopClassification/Data/raw/raw-concatenated/C1415.csv", index=False)
+mainFrame.to_csv("/Users/Sunny/RA-StopClassification/Datasets/raw/concatenated/D1317.csv", index=False)
 
 ##################################2 done################################
